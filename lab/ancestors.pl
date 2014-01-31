@@ -97,16 +97,34 @@ descendant(A, B):-	% A is B's descendant if
 
 %   PROBLEM 1
 %   How can you decide if two people are brothers or sisters?
+brothers(A, B):-
+  male(A),
+  male(B),
+  parent(P, A),
+  parent(P, B).
+
+sisters(A, B):-
+  female(A),
+  female(B),
+  parent(P, A),
+  parent(P, B).
 
 %   PROBLEM 2
 %   How can you decide if two people are siblings?
+siblings(A, B):-
+  parent(P, A),
+  parent(P, B).
 
 %   PROBLEM 3
 %   How do you know if someone is blood-related to someone else ?
+blood_related(A, B):-
+  ancestor(D, A),
+  ancestor(D, B).
 
 %   PROBLEM 4
 %   How can you decide whether two people could possibly marry, given that
 %   only an unrelated male and female are allowed to do this ?
+% could_marry(A, B):-
 
 %   PROBLEM 5
 %   How can you decide whether two people can marry, given the current
