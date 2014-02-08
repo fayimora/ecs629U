@@ -133,15 +133,15 @@ could_marry(A, B):-
   male(A),
   female(B),
   \+ blood_related(A, B),
-  \+ married(A, M),
-  \+ married(B, M).
+  \+ married(A, _),
+  \+ married(B, _).
 
 could_marry(A, B):-
   male(B),
   female(A),
   \+ blood_related(A, B),
-  \+ married(A, M),
-  \+ married(B, M).
+  \+ married(A, _),
+  \+ married(B, _).
 
 %   PROBLEM 5
 %   How can you decide whether two people can marry, given the current
