@@ -150,7 +150,7 @@ could_marry(A, B):-
 %   SOLUTION INCLUDED ABOVE
 
 %   PROBLEM 6
-%   The definition of "Nth Cousin" is: 
+%   The definition of "Nth Cousin" is:
 %   Person1 is the Nth Cousin of Person2 if Person1 and Person2 have a
 %   common ancestor N generations before Person1’s parents.
 %   For example, my 1st cousin is the child of my grandfather’s son, given
