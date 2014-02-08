@@ -66,7 +66,7 @@ route_bfs( Start, End, Route ) :-
 	bfs_search( [[Start]], End, Route ).
 
 % bfs_search is a general search algorithm which searches through an undirected
-%	cyclic graph specified by a binary relation. 
+%	cyclic graph specified by a binary relation.
 
 bfs_search( [FirstAgendaItem|_], End, FirstAgendaItem ) :-
 	bfs_terminate( FirstAgendaItem, End ).	% Succeed if the 1st item on
@@ -82,8 +82,8 @@ bfs_search( [FirstAgendaItem|OtherAgendaItems], End, Solution ) :-
 								% items at the
 								% end of the
 								% agenda
-	bfs_search( NewAgenda, End, Solution ).	% continue search with the new
-						% agenda.
+	bfs_search( NewAgenda, End, Solution ). % continue search with the new
+      % agenda.
 
 % bfs_terminate/2 succeeds if the head of the list in its first argument
 %	representing a route, backwards, unifies with its second argument.
