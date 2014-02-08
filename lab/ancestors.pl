@@ -134,6 +134,11 @@ could_marry(A, B):-
   female(B),
   \+ blood_related(A, B).
 
+could_marry(A, B):-
+  male(B),
+  female(A),
+  \+ blood_related(A, B).
+
 %   PROBLEM 5
 %   How can you decide whether two people can marry, given the current
 %   matrimonial ties in the program above?
