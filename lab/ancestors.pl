@@ -118,8 +118,13 @@ siblings(A, B):-
 %   PROBLEM 3
 %   How do you know if someone is blood-related to someone else ?
 blood_related(A, B):-
-  ancestor(D, A),
-  ancestor(D, B).
+  descendant(A, B).
+
+blood_related(A, B):-
+  descendant(B, A).
+
+blood_related(A, B):-
+  siblings(A, B).
 
 %   PROBLEM 4
 %   How can you decide whether two people could possibly marry, given that
