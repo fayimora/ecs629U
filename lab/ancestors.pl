@@ -129,7 +129,10 @@ blood_related(A, B):-
 %   PROBLEM 4
 %   How can you decide whether two people could possibly marry, given that
 %   only an unrelated male and female are allowed to do this ?
-% could_marry(A, B):-
+could_marry(A, B):-
+  male(A),
+  female(B),
+  \+ blood_related(A, B).
 
 %   PROBLEM 5
 %   How can you decide whether two people can marry, given the current
