@@ -1,6 +1,3 @@
-% CIS335 (2005/6) Assignment 3:
-% Student login name: YOUR LOGIN NAME HERE
-
 :- ['Lines'].
 :- use_module( library(lists) ).
 
@@ -19,39 +16,6 @@ route_on_one_line( Start, End, Line ) :-
 % route_on_one_line( Start, End, Line ) :-
 % 	line( Line, Mid, End ),
 % 	route_on_one_line( Mid, End, Line ).
-
-
-% THIS PREDICATE IS INCOMPLETE!
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-% PART 1.1
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Your code and comments here
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-% PART 1.2
-%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Your code and comments here
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PART 1.3
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Query and output here, AS A COMMENT
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PART 1.4
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Your code and comments here
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PART 1.4
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Your code and comments here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % PART 2
