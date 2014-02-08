@@ -16,9 +16,9 @@ route_on_one_line( Start, End, Line ) :-
 	line( Line, Start, Mid ),
 	route_on_one_line( Mid, End, Line ).
 
-route_on_one_line( Start, End, Line ) :-
-	line( Line, Mid, End ),
-	route_on_one_line( Mid, End, Line ).
+% route_on_one_line( Start, End, Line ) :-
+% 	line( Line, Mid, End ),
+% 	route_on_one_line( Mid, End, Line ).
 
 
 % THIS PREDICATE IS INCOMPLETE!
