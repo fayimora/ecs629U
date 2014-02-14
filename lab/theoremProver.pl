@@ -58,10 +58,12 @@ compute_value( f, f ).
 
 % not operator
 
-% compute_value( ~t, f ).
-% compute_value( ~f, t ).
-% compute_value( ~E, Answer ) :-
-% 	\+ atom( E ),
+compute_value( ~t, f ).
+compute_value( ~f, t ).
+compute_value( ~E, Answer ) :-
+	\+ atom( E ),
+  compute_value(E, EValue),
+  compute_value(~EValue, Answer).
 % COMPLETE THIS CLAUSE
 
 % and operator
