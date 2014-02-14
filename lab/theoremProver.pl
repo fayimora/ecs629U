@@ -46,28 +46,25 @@ compute_values( [Expression|Expressions], [TruthValue|TruthValues] ) :-
   compute_value(Expression, TruthValue),
   compute_values(Expressions, TruthValues).
 
-% COMPLETE THIS CLAUSE
 
 % compute_value/2 is true if its first argument is a logical expression and its 
 %		second argument is the truth value of that expression.
 
 % true and false
-
 compute_value( t, t ).
 compute_value( f, f ).
 
-% not operator
 
+% not operator
 compute_value( ~t, f ).
 compute_value( ~f, t ).
 compute_value( ~E, Answer ) :-
 	\+ atom( E ),
   compute_value(E, EValue),
   compute_value(~EValue, Answer).
-% COMPLETE THIS CLAUSE
+
 
 % and operator
-
 compute_value( f /\ _, f ).
 compute_value( t /\ E, EValue ) :-
 	compute_value( E, EValue ).
@@ -76,8 +73,8 @@ compute_value( E1 /\ E2, Answer ) :-
 	compute_value( E1, E1Value ),
 	compute_value( E1Value /\ E2, Answer ).
 
-% or operator
 
+% or operator
 compute_value( t \/ _, t ).
 compute_value( f \/ E, EValue ) :-
   compute_value( E, EValue ).
@@ -85,6 +82,7 @@ compute_value( E1 \/ E2, Answer ) :-
   \+ atom( E1 ),
   compute_value( E1, E1Value),
   compute_value( E1Value \/ E2, Answer ).
+
 
 % implies operator
 compute_value( f -> _, t ).
