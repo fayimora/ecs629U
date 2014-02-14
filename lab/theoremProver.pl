@@ -79,7 +79,12 @@ compute_value( E1 /\ E2, Answer ) :-
 % or operator
 
 compute_value( t \/ _, t ).
-% COMPLETE THIS PREDICATE (2 MORE CLAUSES)
+compute_value( f \/ E, EValue ) :-
+  compute_value( E, EValue ).
+compute_value( E1 \/ E2, Answer ) :-
+  \+ atom( E1 ),
+  compute_value( E1, E1Value),
+  compute_value( E1Value \/ E2, Answer ).
 
 % implies operator
 
