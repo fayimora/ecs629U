@@ -43,6 +43,9 @@ assign_value( f ) :- true.
 
 compute_values( [], [] ).
 compute_values( [Expression|Expressions], [TruthValue|TruthValues] ) :-
+  compute_value(Expression, TruthValue),
+  compute_values(Expressions, TruthValues).
+
 % COMPLETE THIS CLAUSE
 
 % compute_value/2 is true if its first argument is a logical expression and its 
@@ -55,10 +58,10 @@ compute_value( f, f ).
 
 % not operator
 
-compute_value( ~t, f ).
-compute_value( ~f, t ).
-compute_value( ~E, Answer ) :-
-	\+ atom( E ),
+% compute_value( ~t, f ).
+% compute_value( ~f, t ).
+% compute_value( ~E, Answer ) :-
+% 	\+ atom( E ),
 % COMPLETE THIS CLAUSE
 
 % and operator
