@@ -34,9 +34,9 @@ assign_values( [H|T] ) :-
 	assign_values( T ).
 
 % assign_value is true if its argument is t (true) or f (false)
-
 assign_value( t ) :- true.
 assign_value( f ) :- true.
+
 % compute_values/2 is true if its first argument is a set of logical expressions
 %		composed of t, f, and the logical connectives, the second is a 
 %		corresponding list of the results of computing these expressions.
